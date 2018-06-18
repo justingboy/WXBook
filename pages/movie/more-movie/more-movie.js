@@ -38,7 +38,7 @@ Page({
     wx.stopPullDownRefresh();
     // //隐藏loading状态
     wx.hideNavigationBarLoading();
- 
+
   },
 
 
@@ -70,6 +70,15 @@ Page({
     // this.data.requestUrl = dataUrl;
     // util.http(dataUrl, this.processDoubanData)
     this.processDoubanData(localdataMovie);
+  },
+
+  //电影详情
+  onMovieTab: function (event) {
+    var movieId = event.currentTarget.dataset.movieId;
+    console.log("打开电影详情：onMovieTab");
+    wx.navigateTo({
+      url: "../movie-detail/movie-detail?id=" + movieId
+    })
   },
 
   /**
@@ -114,7 +123,7 @@ Page({
     // util.http(refreshUrl, this.processDoubanData);
     //本地测试刷新
     this.processDoubanData(datas.refreshMovieDatas);
-   
+
 
   },
 
