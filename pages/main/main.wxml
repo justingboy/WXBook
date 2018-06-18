@@ -1,0 +1,8 @@
+<!--pages/main/main.wxml-->
+<view class='contanier'>
+  <image class="avatar" src="{{logo}}" mode='widthFix'></image>
+  <view class='start_contanier' catchtap="onTabJump">
+    <text class='start'>开启微信小程序开发之旅</text>
+  </view>
+
+</view>

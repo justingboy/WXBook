@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="category-item">
+    <block wx:for="{{phoneInfo}}" wx:key="{{item.key}}">
+      <view class="detail-item">
+        <text>{{item.key}}</text>
+        <text>{{item.val}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="category-item">
+    <block wx:for="{{softInfo}}" wx:key="{{item.key}}">
+      <view class="detail-item">
+        <text>{{item.key}}</text>
+        <text>{{item.val}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="category-item">
+    <block wx:for="{{screenInfo}}" wx:key="{{item.key}}">
+      <view class="detail-item">
+        <text>{{item.key}}</text>
+        <text>{{item.val}}</text>
+      </view>
+    </block>
+  </view>
+  <modal title="指南针" confirm-text="确定" no-cancel hidden="{{compassHidden}}" bindconfirm="hideCompass" confirm-color="#1F4BA5">
+    当前方向：偏北{{compassVal}}°
+  </modal>
+  <modal title="摇一摇" confirm-text="确定" no-cancel hidden="{{shakeInfo.gravityModalHidden}}" bindconfirm="gravityModalConfirm" confirm-color="#1F4BA5">
+    当前摇一摇次数：{{shakeInfo.num}}
+  </modal>
+</view>

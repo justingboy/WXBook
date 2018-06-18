@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/post/post",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/post-detail/post-detail",
+    "pages/post-comment/post-comment",
+    "pages/movie/movie",
+    "pages/movie/more-movie/more-movie",
+    "pages/setting/setting",
+    "pages/setting/device/device",
+    "pages/setting/document/document",
+    "pages/setting/open-api/login/login",
+    "pages/movie/movie-detail/movie-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4A6141",
+    "navigationBarTitleText": "外勤助手",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "selectedColor": "#4A6141",
+    "color": "#333",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/post/post",
+        "text": "文章",
+        "iconPath": "images/icon/wx_app_news.png",
+        "selectedIconPath": "images/icon/wx_app_news@HL.png"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "images/icon/wx_app_movie.png",
+        "selectedIconPath": "images/icon/wx_app_movie@HL.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "设置",
+        "iconPath": "images/icon/wx_app_setting.png",
+        "selectedIconPath": "images/icon/wx_app_setting@HL.png"
+      }
+    ]
+  }
+}

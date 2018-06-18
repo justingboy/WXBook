@@ -1,0 +1,59 @@
+<view class="container">
+  <!-- 用户微信信息 -->
+  <view class="category-item personal-info">
+    <view class="user-avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="user-name">
+      <view class="user-nickname">
+        <open-data type="userNickName"></open-data>
+      </view>
+      <view class="user-locaiton">
+        <text>所在地：{{userInfo.city}}</text>
+        <open-data type="userCity" lang="zh_CN"></open-data>
+      </view>
+    </view>
+
+  </view>
+  <!-- 缓存面板 -->
+  <view class="category-item">
+    <block wx:for="{{cache}}" wx:for-item="item" wx:key="{{item.title}}">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <!-- 设备面板 -->
+  <view class="category-item">
+    <block wx:for="{{device}}" wx:key="{{item.title}}">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <!-- API面板 -->
+  <view class="category-item">
+    <block wx:for="{{api}}" wx:key="{{item.title}}">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <!-- 其他面板 -->
+  <view class="category-item">
+    <block wx:for="{{others}}" wx:key="{{item.title}}">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+
+</view>

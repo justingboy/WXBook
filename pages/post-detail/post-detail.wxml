@@ -1,0 +1,32 @@
+<!--pages/post-detail/pots-detail.wxml-->
+<view class='detail-container'>
+  <image class="head-image" src='{{data.postImage}}' mode='scaleToFill'></image>
+  <text class='post-detail-title'>{{data.title}}</text>
+  <view class='author-box'>
+    <view class='author-name'>
+      <image class="avatar" src='{{data.avatar}}'></image>
+      <text>狄九</text>
+    </view>
+    <text>{{data.date}}</text>
+  </view>
+  <text class='content'>{{data.content}}</text>
+  <view class='post-like'>
+    <!--点赞 -->
+    <view class="post-detail-like" catchtap='onUpTab' data-post-id='{{data.postId}}'>
+      <image wx:if="{{data.upStatus}}" src='/images/icon/wx_app_liked.png'></image>
+      <image wx:else src='/images/icon/wx_app_like.png'></image>
+      <text>{{data.readingNum}}</text>
+    </view>
+    <!--评论 -->
+    <view class="post-detail-like" catchtap='onCommentTab' data-post-id='{{data.postId}}'>
+      <image src='/images/icon/wx_app_message.png'></image>
+      <text>{{data.commentNum}}</text>
+    </view>
+    <!--收藏 -->
+    <view class="post-detail-like" catchtap='onCollectionTab' data-post-id='{{data.postId}}'>
+      <image wx:if="{{data.collectStatus}}" src='/images/icon/wx_app_collected.png'></image>
+      <image wx:else src='/images/icon/wx_app_collect.png'></image>
+      <text>{{data.collectNum}}</text>
+    </view>
+  </view>
+</view>

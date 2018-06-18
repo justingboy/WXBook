@@ -1,0 +1,23 @@
+<!--pages/post/post.wxml-->
+<!--引入模板文件-->
+<import src="post-item/post-item-tpl.wxml" />
+<view>
+  <!--轮播图-->
+  <swiper indicator-dots='true' autoplay='true' interval='3000' indicator-color='#000' circular='true' indicator-active-color='#fff' vertical=''>
+    <swiper-item>
+      <image src='/images/post/post-1@text.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/post/post-2@text.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/post/post-3@text.jpg'></image>
+    </swiper-item>
+  </swiper>
+  <!--文章列表渲染-->
+  <block wx:for="{{postList}}" wx:for-item="item" wx:key="postion">
+  <view catchtap='onTabToDetail' data-post-id='{{item.postId}}'>
+    <template is="postItemTpl" data="{{...item}}" />
+  </view>
+  </block>
+</view>

@@ -1,0 +1,18 @@
+@import "../starts/starts-tpl.wxss";
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 22rpx;
+}
+
+.movie-image {
+  width: 200rpx;
+  height: 270rpx;
+  padding-bottom: 20rpx;
+}
+
+.movie-title {
+  margin-bottom: 16rp;
+  font-size: 24rpx;
+}
